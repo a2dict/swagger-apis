@@ -11,7 +11,7 @@ cp -rf /apis/ /usr/share/nginx/html/
 INPUT=$1
 INPUT=${INPUT:-"/apis/"}
 
-# file output
+# output file
 OUTPUT=$2
 OUTPUT=${OUTPUT:-"/usr/share/nginx/html/apis/swagger-config.json"}
 
