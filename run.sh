@@ -23,4 +23,6 @@ done |tr '\n' ','|sed 's/.$//'|sed 's/$/]}/'|sed 's/^/{"urls":[/'`
 
 echo $SWAGGER_CONFIG  > $OUTPUT 
 
+# fix permission-denied
+chmod -R 777 /usr/share/nginx/html/apis/
 exec sh /usr/share/nginx/run.sh
