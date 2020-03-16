@@ -15,7 +15,7 @@ INPUT=${INPUT:-"/apis/"}
 OUTPUT=$2
 OUTPUT=${OUTPUT:-"/usr/share/nginx/html/apis/swagger-config.json"}
 
-SWAGGER_CONFIG=`cd $INPUT;find . -type f -name '*.swagger.json' -or -name '*.swagger.yaml' -or '*.swagger.yml'|sed 's/.//'|sort|while read line
+SWAGGER_CONFIG=`cd $INPUT;find . -type f -name '*.swagger.json' -or -name '*.swagger.yaml' -or -name '*.swagger.yml'|sed 's/.//'|sort|while read line
 do
     echo "{\"name\":\"${line:1}\",\"url\":\"/apis${line}\"}"
 
